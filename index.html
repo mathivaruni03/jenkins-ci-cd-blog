@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automating Code Builds with Jenkins | DevOps CI/CD Blog</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: #1a1a1a; color: #fff; padding: 20px 0; text-align: center; }
+    img { max-width: 100%; height: auto; margin: 20px 0; border-radius: 8px; }
+    section { margin-bottom: 30px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    h1, h2 { color: #222; }
+    footer { text-align: center; padding: 20px; color: #666; }
+    code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Automating Code Builds Using Jenkins</h1>
+    <p>A Modern DevOps Approach to CI/CD</p>
+  </header>
+
+  <section>
+    <h2>Description / Abstract</h2>
+    <p>This project focuses on automating the code build process using <strong>Jenkins</strong>, an open-source automation server that plays a pivotal role in modern <strong>DevOps</strong> workflows. The core objective is to establish a reliable and repeatable process where code changes are automatically built, tested, and optionally deployed without manual intervention.</p>
+    <p>By integrating Jenkins with version control systems like GitHub, the system automatically detects code commits and initiates build jobs that compile the source code, run unit and integration tests, and generate deployable artifacts. This automation not only minimizes human errors but also accelerates the development lifecycle, ensures consistency across builds, and enables rapid delivery of features and bug fixes.</p>
+  </section>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>In today’s agile software development landscape, teams strive to release high-quality software faster and more frequently. This need has led to the adoption of <strong>Continuous Integration (CI)</strong> and <strong>Continuous Deployment/Delivery (CD)</strong> practices, which emphasize frequent code integration, automated testing, and rapid delivery pipelines. One of the most popular tools facilitating CI/CD is <strong>Jenkins</strong>, an open-source automation server.</p>
+    <p>Jenkins allows development teams to automate critical parts of the software delivery process, including building the code, running tests, analyzing quality metrics, and deploying applications to different environments. Through plugins and integrations, Jenkins supports a wide range of tools such as Maven, Gradle, Docker, Git, and cloud platforms, making it highly flexible and scalable.</p>
+  </section>
+
+  <section>
+    <h2>Architecture Diagram</h2>
+    <img src="jenkins-ci-architecture.png" alt="Jenkins Architecture Diagram" />
+    <p>This diagram illustrates the flow from code commit to build execution and optional deployment to staging or production servers, triggered and managed through Jenkins automation pipelines.</p>
+  </section>
+
+  <section>
+    <h2>Requirements & Supported Systems</h2>
+    <ul>
+      <li>Java (JDK 8+)</li>
+      <li>Jenkins (Latest LTS version)</li>
+      <li>GitHub account/repository</li>
+      <li>Build tools (e.g., Maven, Gradle)</li>
+      <li>Testing frameworks (JUnit, TestNG, etc.)</li>
+      <li>Optional deployment environment (Staging/Production server)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools Used</h2>
+    <ul>
+      <li><strong>Software:</strong> Jenkins, Git, GitHub, Maven, Docker</li>
+      <li><strong>Hardware:</strong> Jenkins-hosting server (cloud or local)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Implementation</h2>
+    <p>1. Install Jenkins on a server and configure required plugins.</p>
+    <p>2. Connect Jenkins to GitHub using webhooks or polling.</p>
+    <p>3. Create a Jenkins job or pipeline to:</p>
+    <ul>
+      <li>Pull the latest code on change</li>
+      <li>Run build scripts (e.g., <code>mvn clean install</code>)</li>
+      <li>Execute automated unit/integration tests</li>
+      <li>Generate build artifacts</li>
+      <li>Deploy artifacts to staging/production (optional)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Input & Output</h2>
+    <p><strong>Input:</strong> Code changes committed to GitHub repository.</p>
+    <p><strong>Output:</strong> Build status (Success/Failure), generated artifacts, test results, and optional deployment outcome.</p>
+  </section>
+
+  <section>
+    <h2>Applications</h2>
+    <ul>
+      <li>Software development and testing automation</li>
+      <li>Continuous Integration / Continuous Deployment workflows</li>
+      <li>Agile DevOps pipelines for rapid release cycles</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ul>
+      <li><a href="https://www.jenkins.io/">https://www.jenkins.io/</a></li>
+      <li><a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD Concepts - Atlassian</a></li>
+      <li><a href="https://maven.apache.org/">https://maven.apache.org/</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jenkins CI/CD Project Blog | For Educational Use</p>
+  </footer>
+</body>
+</html>

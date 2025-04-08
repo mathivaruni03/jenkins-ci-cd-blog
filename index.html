@@ -118,9 +118,39 @@
 
   <section>
     <h2>Architecture Diagram</h2>
-    <img src="jenkins-ci-architecture.png" alt="Jenkins Architecture Diagram" />
+    <img src="https://www.blazemeter.com/sites/default/files/image/2022-06/1-min_1.png" alt="Jenkins Architecture Diagram" />
     <p>This diagram illustrates the flow from code commit to build execution and optional deployment to staging or production servers, triggered and managed through Jenkins automation pipelines.</p>
   </section>
+
+  <section>
+    <h2>Basic Architecture</h2>
+    <img src="https://miro.medium.com/v2/resize:fit:841/1*j5FO-acFgt-u_NJgK2a60w.png" alt="Basic jenkins architecture"/>
+    <h1>1. Organization User</h1>
+    <p>At the top of this architecture is the Organization User, the individual or team responsible for making changes to the codebase. These changes trigger the Jenkins build process.</p>
+    <h1>2. Source Code Repository</h1>
+    <p>The source code is managed in a Source Code Repository, typically using a version control system (VCS) like Git. Jenkins is integrated with the repository through SCM (Source Code Management), allowing it to monitor changes (commits or merges). Once a change is detected, Jenkins pulls the latest version of the code to begin the build process.</p>
+
+ <h1>3. Master Node (Controller) </h1>
+<p>The Master Node, also known as the Controller, is the brain of the Jenkins architecture. It schedules build jobs, monitors the agents (slave nodes), and assigns jobs based on predefined rules. The master node doesn’t usually execute the build or test jobs but instead delegates them to agents that are better suited for those tasks.</p>
+
+ <h1>4. Slave Nodes (Agents) </h1>
+<p>Jenkins can distribute workloads across various Slave Nodes (Agents). Each agent is a machine (physical or virtual) that performs the actual work. In the diagram above, we have three different types of agents:</p>
+
+<p>Agent1: A Windows-based machine that handles Windows-specific jobs.
+Agent2: A Linux-based machine for running jobs in Linux environments.
+Agent3: A MacOS machine, used when builds or tests require a Mac environment.
+The communication between the master node and the agents is typically established via SSH or JNLP.</p>
+
+ <h1>5. Build, Test, Deploy </h1>
+<p>Once the agents receive jobs from the master, they proceed with the Build, Test, and Deploy stages:</p>
+
+<p>Build: The source code is compiled, and build artifacts are created.
+Test: Automated tests are run to ensure the build is stable and free of defects.
+Deploy: If the build and tests pass, the application can be deployed to staging or production environments.
+The ability to run jobs on different agents allows for greater flexibility and efficiency, especially in large projects with varying platform requirements.</p>
+
+ <h1>Conclusion </h1>
+<p>This basic Jenkins architecture highlights the power of distributed builds and how Jenkins can streamline the CI/CD process across different platforms. Whether you’re building software on Windows, Linux, or MacOS, Jenkins can coordinate and automate these tasks, reducing manual work and minimizing errors.</p>
 
   <section>
     <h2>Requirements & Supported Systems</h2>

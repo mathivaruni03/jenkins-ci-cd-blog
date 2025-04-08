@@ -5,13 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Automating Code Builds with Jenkins | DevOps CI/CD Blog</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: #1a1a1a; color: #fff; padding: 20px 0; text-align: center; }
-    img { max-width: 100%; height: auto; margin: 20px 0; border-radius: 8px; }
-    section { margin-bottom: 30px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    h1, h2 { color: #222; }
-    footer { text-align: center; padding: 20px; color: #666; }
-    code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f2f6f9, #e3eaf1);
+      color: #333;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #cfd9df;
+    }
+
+    section {
+      background: white;
+      border-radius: 15px;
+      padding: 25px 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    code {
+      background-color: #f3f3f3;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+      color: #7f8c8d;
+    }
   </style>
 </head>
 <body>
@@ -23,13 +108,12 @@
   <section>
     <h2>Description / Abstract</h2>
     <p>This project focuses on automating the code build process using <strong>Jenkins</strong>, an open-source automation server that plays a pivotal role in modern <strong>DevOps</strong> workflows. The core objective is to establish a reliable and repeatable process where code changes are automatically built, tested, and optionally deployed without manual intervention.</p>
-    <p>By integrating Jenkins with version control systems like GitHub, the system automatically detects code commits and initiates build jobs that compile the source code, run unit and integration tests, and generate deployable artifacts. This automation not only minimizes human errors but also accelerates the development lifecycle, ensures consistency across builds, and enables rapid delivery of features and bug fixes.</p>
+    <p>By integrating Jenkins with version control systems like GitHub, the system automatically detects code commits and initiates build jobs that compile the source code, run unit and integration tests, and generate deployable artifacts.</p>
   </section>
 
   <section>
     <h2>Introduction</h2>
-    <p>In today’s agile software development landscape, teams strive to release high-quality software faster and more frequently. This need has led to the adoption of <strong>Continuous Integration (CI)</strong> and <strong>Continuous Deployment/Delivery (CD)</strong> practices, which emphasize frequent code integration, automated testing, and rapid delivery pipelines. One of the most popular tools facilitating CI/CD is <strong>Jenkins</strong>, an open-source automation server.</p>
-    <p>Jenkins allows development teams to automate critical parts of the software delivery process, including building the code, running tests, analyzing quality metrics, and deploying applications to different environments. Through plugins and integrations, Jenkins supports a wide range of tools such as Maven, Gradle, Docker, Git, and cloud platforms, making it highly flexible and scalable.</p>
+    <p>In today’s agile software development landscape, teams strive to release high-quality software faster and more frequently. This need has led to the adoption of <strong>Continuous Integration (CI)</strong> and <strong>Continuous Deployment/Delivery (CD)</strong> practices. One of the most popular tools facilitating CI/CD is <strong>Jenkins</strong>.</p>
   </section>
 
   <section>
@@ -90,9 +174,9 @@
   <section>
     <h2>References</h2>
     <ul>
-      <li><a href="https://www.jenkins.io/">https://www.jenkins.io/</a></li>
-      <li><a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD Concepts - Atlassian</a></li>
-      <li><a href="https://maven.apache.org/">https://maven.apache.org/</a></li>
+      <li><a href="https://www.jenkins.io/" target="_blank">Jenkins Official Site</a></li>
+      <li><a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd" target="_blank">CI/CD Concepts - Atlassian</a></li>
+      <li><a href="https://maven.apache.org/" target="_blank">Apache Maven</a></li>
     </ul>
   </section>
 
